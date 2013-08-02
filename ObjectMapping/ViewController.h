@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
-
+#import "APIHelper.h"
+@interface ViewController : UIViewController<APIHelperDelegate>
+@property (retain,nonatomic) IBOutlet UIButton *btnApiCall;
+@property (retain,nonatomic) IBOutlet UIButton *btnSeeResult;
+@property (retain,nonatomic) NSDictionary *dictionary;
+@property (retain,nonatomic) APIHelper *apiHelper;
+-(IBAction)apiCall:(id)sender;
+-(IBAction)seeResult:(id)sender;
 @end

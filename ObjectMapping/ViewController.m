@@ -9,12 +9,14 @@
 #import "ViewController.h"
 #import "Parser.h"
 #import "Person.h"
+#import "TestApi.h"
+#import "APIHelper.h"
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-
+@synthesize btnApiCall,dictionary,apiHelper;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -67,6 +69,43 @@
     NSLog(@"%@",ploc1.city);
     NSLog(@"%@",ploc1.address);
     
+}
+
+
+
+-(IBAction)apiCall:(id)sender{
+    apiHelper=[[APIHelper alloc]init];
+    
+    [apiHelper apiCallWithURL:@"http://api.kivaws.org/v1/loans/search.json?status=fundraising" withParameters:nil withLoadingText:@"Loading" withView:self.view];
+    apiHelper.delegate=self;
+    
+}
+
+-(IBAction)seeResult:(id)sender{
+    TestApi *testapi=[[TestApi alloc]init];
+    ModelLoan *modelLoan=[[ModelLoan alloc]init];
+    testapi.loans=[NSMutableArray arrayWithObjects:modelLoan, nil];
+    
+    Parser *parser=[[Parser alloc]init];
+    testapi=[parser dictionaryToObjectMappingForObject:testapi fromDictionary:dictionary];
+    
+    for(int i=0;i<20;i++){
+   ModelLoan *loan=[testapi.loans objectAtIndex:i];
+        NSLog(@"%@",loan.name);
+    }
+}
+
+
+-(void)apiCallWithResponse:(id)response{
+    dictionary=response;
+    NSLog(@"%@",dictionary);
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Success" message:@"SUCCESS" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+}
+
+- (void)apiCallWithError:(NSError *)error{
+    [apiHelper setShowProgress:NO];
+    NSLog(@"error");
 }
 
 - (void)didReceiveMemoryWarning

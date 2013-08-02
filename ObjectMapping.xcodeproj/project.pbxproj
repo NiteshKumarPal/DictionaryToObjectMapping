@@ -21,6 +21,9 @@
 		59DFEE8D17AB75DE00337005 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DFEE8C17AB75DE00337005 /* Person.m */; };
 		59DFEE9017AB7AAA00337005 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DFEE8F17AB7AAA00337005 /* Parser.m */; };
 		59DFEE9317AB87D900337005 /* PersonLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DFEE9217AB800A00337005 /* PersonLocation.m */; };
+		59DFEE9C17ABCDBB00337005 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DFEE9A17ABCD8F00337005 /* MBProgressHUD.m */; };
+		59DFEE9D17ABCDBE00337005 /* APIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DFEE9717ABCD7500337005 /* APIHelper.m */; };
+		59DFEE9E17ABD24100337005 /* TestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DFEE9517ABCB6800337005 /* TestApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,13 @@
 		59DFEE8F17AB7AAA00337005 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 		59DFEE9117AB800A00337005 /* PersonLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonLocation.h; sourceTree = "<group>"; };
 		59DFEE9217AB800A00337005 /* PersonLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonLocation.m; sourceTree = "<group>"; };
+		59DFEE9417ABCB6800337005 /* TestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestApi.h; sourceTree = "<group>"; };
+		59DFEE9517ABCB6800337005 /* TestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestApi.m; sourceTree = "<group>"; };
+		59DFEE9617ABCD7500337005 /* APIHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIHelper.h; sourceTree = "<group>"; };
+		59DFEE9717ABCD7500337005 /* APIHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIHelper.m; sourceTree = "<group>"; };
+		59DFEE9817ABCD7500337005 /* APIHelperDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIHelperDelegate.h; sourceTree = "<group>"; };
+		59DFEE9917ABCD8F00337005 /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		59DFEE9A17ABCD8F00337005 /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +102,12 @@
 		59DFEE6B17AB74E200337005 /* ObjectMapping */ = {
 			isa = PBXGroup;
 			children = (
+				59DFEE9F17AC08F300337005 /* Parser */,
+				59DFEE9B17ABCD9D00337005 /* APIHelper */,
 				59DFEE7417AB74E200337005 /* AppDelegate.h */,
 				59DFEE7517AB74E200337005 /* AppDelegate.m */,
-				59DFEE8E17AB7AAA00337005 /* Parser.h */,
-				59DFEE8F17AB7AAA00337005 /* Parser.m */,
+				59DFEE9417ABCB6800337005 /* TestApi.h */,
+				59DFEE9517ABCB6800337005 /* TestApi.m */,
 				59DFEE8B17AB75DE00337005 /* Person.h */,
 				59DFEE8C17AB75DE00337005 /* Person.m */,
 				59DFEE9117AB800A00337005 /* PersonLocation.h */,
@@ -120,6 +132,27 @@
 				59DFEE7B17AB74E200337005 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59DFEE9B17ABCD9D00337005 /* APIHelper */ = {
+			isa = PBXGroup;
+			children = (
+				59DFEE9917ABCD8F00337005 /* MBProgressHUD.h */,
+				59DFEE9A17ABCD8F00337005 /* MBProgressHUD.m */,
+				59DFEE9617ABCD7500337005 /* APIHelper.h */,
+				59DFEE9717ABCD7500337005 /* APIHelper.m */,
+				59DFEE9817ABCD7500337005 /* APIHelperDelegate.h */,
+			);
+			name = APIHelper;
+			sourceTree = "<group>";
+		};
+		59DFEE9F17AC08F300337005 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				59DFEE8E17AB7AAA00337005 /* Parser.h */,
+				59DFEE8F17AB7AAA00337005 /* Parser.m */,
+			);
+			name = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +227,9 @@
 				59DFEE8D17AB75DE00337005 /* Person.m in Sources */,
 				59DFEE9017AB7AAA00337005 /* Parser.m in Sources */,
 				59DFEE9317AB87D900337005 /* PersonLocation.m in Sources */,
+				59DFEE9C17ABCDBB00337005 /* MBProgressHUD.m in Sources */,
+				59DFEE9D17ABCDBE00337005 /* APIHelper.m in Sources */,
+				59DFEE9E17ABD24100337005 /* TestApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +352,7 @@
 				59DFEE8717AB74E200337005 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
