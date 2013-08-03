@@ -75,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59CACB5E17ADA5210050E556 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				59DFEE8E17AB7AAA00337005 /* Parser.h */,
+				59DFEE8F17AB7AAA00337005 /* Parser.m */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
 		59DFEE5917AB74E200337005 = {
 			isa = PBXGroup;
 			children = (
@@ -105,13 +114,12 @@
 		59DFEE6B17AB74E200337005 /* ObjectMapping */ = {
 			isa = PBXGroup;
 			children = (
+				59CACB5E17ADA5210050E556 /* Parser */,
 				59DFEE9B17ABCD9D00337005 /* APIHelper */,
 				59DFEE7417AB74E200337005 /* AppDelegate.h */,
 				59DFEE7517AB74E200337005 /* AppDelegate.m */,
 				59DFEE9417ABCB6800337005 /* TestApi.h */,
 				59DFEE9517ABCB6800337005 /* TestApi.m */,
-				59DFEE8E17AB7AAA00337005 /* Parser.h */,
-				59DFEE8F17AB7AAA00337005 /* Parser.m */,
 				59DFEE8B17AB75DE00337005 /* Person.h */,
 				59DFEE8C17AB75DE00337005 /* Person.m */,
 				59CACAB817AD07310050E556 /* PersonOneLocation.h */,
