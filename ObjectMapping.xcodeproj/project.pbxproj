@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59CACABA17AD07310050E556 /* PersonOneLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CACAB917AD07310050E556 /* PersonOneLocation.m */; };
 		59DFEE6617AB74E200337005 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DFEE6517AB74E200337005 /* UIKit.framework */; };
 		59DFEE6817AB74E200337005 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DFEE6717AB74E200337005 /* Foundation.framework */; };
 		59DFEE6A17AB74E200337005 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59DFEE6917AB74E200337005 /* CoreGraphics.framework */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59CACAB817AD07310050E556 /* PersonOneLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonOneLocation.h; sourceTree = "<group>"; };
+		59CACAB917AD07310050E556 /* PersonOneLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonOneLocation.m; sourceTree = "<group>"; };
 		59DFEE6217AB74E200337005 /* ObjectMapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectMapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59DFEE6517AB74E200337005 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59DFEE6717AB74E200337005 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,14 +105,17 @@
 		59DFEE6B17AB74E200337005 /* ObjectMapping */ = {
 			isa = PBXGroup;
 			children = (
-				59DFEE9F17AC08F300337005 /* Parser */,
 				59DFEE9B17ABCD9D00337005 /* APIHelper */,
 				59DFEE7417AB74E200337005 /* AppDelegate.h */,
 				59DFEE7517AB74E200337005 /* AppDelegate.m */,
 				59DFEE9417ABCB6800337005 /* TestApi.h */,
 				59DFEE9517ABCB6800337005 /* TestApi.m */,
+				59DFEE8E17AB7AAA00337005 /* Parser.h */,
+				59DFEE8F17AB7AAA00337005 /* Parser.m */,
 				59DFEE8B17AB75DE00337005 /* Person.h */,
 				59DFEE8C17AB75DE00337005 /* Person.m */,
+				59CACAB817AD07310050E556 /* PersonOneLocation.h */,
+				59CACAB917AD07310050E556 /* PersonOneLocation.m */,
 				59DFEE9117AB800A00337005 /* PersonLocation.h */,
 				59DFEE9217AB800A00337005 /* PersonLocation.m */,
 				59DFEE7D17AB74E200337005 /* ViewController.h */,
@@ -144,15 +150,6 @@
 				59DFEE9817ABCD7500337005 /* APIHelperDelegate.h */,
 			);
 			name = APIHelper;
-			sourceTree = "<group>";
-		};
-		59DFEE9F17AC08F300337005 /* Parser */ = {
-			isa = PBXGroup;
-			children = (
-				59DFEE8E17AB7AAA00337005 /* Parser.h */,
-				59DFEE8F17AB7AAA00337005 /* Parser.m */,
-			);
-			name = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +227,7 @@
 				59DFEE9C17ABCDBB00337005 /* MBProgressHUD.m in Sources */,
 				59DFEE9D17ABCDBE00337005 /* APIHelper.m in Sources */,
 				59DFEE9E17ABD24100337005 /* TestApi.m in Sources */,
+				59CACABA17AD07310050E556 /* PersonOneLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

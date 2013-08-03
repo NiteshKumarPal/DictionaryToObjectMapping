@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Parser.h"
 #import "Person.h"
+#import "PersonOneLocation.h"
 #import "TestApi.h"
 #import "APIHelper.h"
 @interface ViewController ()
@@ -24,16 +25,12 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    //test array of objects
   NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [dict setObject:@"Rahul" forKey:@"name"];
     [dict setObject:@"Sharma" forKey:@"surname"];
     NSNumber *pAge=[NSNumber numberWithInt:27];
     [dict setObject:pAge forKey:@"age"];
-//   NSMutableDictionary *loc=[[NSMutableDictionary alloc]init];
-//    [loc setObject:@"Pune" forKey:@"city"];
-//    [loc setObject:@"Bhawdhan" forKey:@"address"];
-    
-    //[dict setObject:loc forKey:@"location"];
     
     NSMutableDictionary *loc1=[[NSMutableDictionary alloc]init];
     [loc1 setObject:@"Pune" forKey:@"city"];
@@ -56,7 +53,7 @@
     PersonLocation *plocation1=[[PersonLocation alloc]init];
     PersonLocation *plocation2=[[PersonLocation alloc]init];
     PersonLocation *plocation3=[[PersonLocation alloc]init];
-    NSMutableArray *plocations=[NSMutableArray arrayWithObjects:plocation1,plocation2,plocation3, nil];
+    NSMutableArray *plocations=[NSMutableArray arrayWithObjects:plocation1,nil];
     person.location=plocations;
     
     
@@ -68,6 +65,31 @@
     PersonLocation *ploc1=[person.location objectAtIndex:1];
     NSLog(@"%@",ploc1.city);
     NSLog(@"%@",ploc1.address);
+    
+    
+    //composite test
+    NSMutableDictionary *dict1 = [NSMutableDictionary dictionary];
+        [dict1 setObject:@"Rahul" forKey:@"name"];
+        [dict1 setObject:@"Sharma" forKey:@"surname"];
+        NSNumber *p2Age=[NSNumber numberWithInt:27];
+        [dict1 setObject:p2Age forKey:@"age"];
+        NSMutableDictionary *loc=[[NSMutableDictionary alloc]init];
+        [loc setObject:@"Pune" forKey:@"city"];
+        [loc setObject:@"Bhawdhan" forKey:@"address"];
+    
+        [dict1 setObject:loc forKey:@"location"];
+    
+    PersonOneLocation *personOneLocation=[[PersonOneLocation alloc]init];
+    PersonLocation *ploc=[[PersonLocation alloc]init];
+    personOneLocation.location=ploc;
+    
+    personOneLocation=[parser dictionaryToObjectMappingForObject:personOneLocation fromDictionary:dict1];
+    NSLog(@"%@",personOneLocation.name);
+    NSLog(@"%@",personOneLocation.surname);
+    NSLog(@"%@",personOneLocation.age);
+    NSLog(@"%@",personOneLocation.location.city);
+    NSLog(@"%@",personOneLocation.location.address);
+
     
 }
 
